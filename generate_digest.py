@@ -45,7 +45,7 @@ def generate_digest() -> str:
     client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
 
     response = client.messages.create(
-        model="claude-sonnet-4-6",
+        model="claude-opus-4-7",
         max_tokens=8000,
         tools=[{"type": "web_search_20250305", "name": "web_search"}],
         messages=[{"role": "user", "content": PROMPT}],
